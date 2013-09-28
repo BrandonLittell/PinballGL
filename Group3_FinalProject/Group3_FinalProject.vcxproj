@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{D16C7766-B74C-497B-B9E2-EE8C02E8A39A}</ProjectGuid>
+    <RootNamespace>Group3_FinalProject</RootNamespace>
+    <ProjectName>PinballGL</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="AbstractMenu.cpp" />
+    <ClCompile Include="Ball.cpp" />
+    <ClCompile Include="Bumper.cpp" />
+    <ClCompile Include="Collision.cpp" />
+    <ClCompile Include="CreditsMenu.cpp" />
+    <ClCompile Include="DrawablePolygon.cpp" />
+    <ClCompile Include="Flipper.cpp" />
+    <ClCompile Include="GLTextWriter.cpp" />
+    <ClCompile Include="HUD.cpp" />
+    <ClCompile Include="InstructionsMenu.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Game.cpp" />
+    <ClCompile Include="MenuManager.cpp" />
+    <ClCompile Include="PauseMenu.cpp" />
+    <ClCompile Include="Plunger.cpp" />
+    <ClCompile Include="RigidBody.cpp" />
+    <ClCompile Include="Spinner.cpp" />
+    <ClCompile Include="TitleMenu.cpp" />
+    <ClCompile Include="Wall.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AbstractGameObject.h" />
+    <ClInclude Include="AbstractMenu.h" />
+    <ClInclude Include="Ball.h" />
+    <ClInclude Include="Bumper.h" />
+    <ClInclude Include="Collision.h" />
+    <ClInclude Include="CreditsMenu.h" />
+    <ClInclude Include="DrawablePolygon.h" />
+    <ClInclude Include="Flipper.h" />
+    <ClInclude Include="GLTextWriter.h" />
+    <ClInclude Include="HUD.h" />
+    <ClInclude Include="includes.h" />
+    <ClInclude Include="Game.h" />
+    <ClInclude Include="InstructionsMenu.h" />
+    <ClInclude Include="mat.h" />
+    <ClInclude Include="MenuManager.h" />
+    <ClInclude Include="Mesh.h" />
+    <ClInclude Include="PauseMenu.h" />
+    <ClInclude Include="Plunger.h" />
+    <ClInclude Include="RigidBody.h" />
+    <ClInclude Include="Shader.h" />
+    <ClInclude Include="Spinner.h" />
+    <ClInclude Include="TitleMenu.h" />
+    <ClInclude Include="Transform.h" />
+    <ClInclude Include="vec.h" />
+    <ClInclude Include="Wall.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="fshader.glsl" />
+    <None Include="vshader.glsl" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ExecutablePath>$(SolutionDir)GL\x86\bin;$(ExecutablePath)</ExecutablePath>
+    <LibraryPath>$(SolutionDir)GL\x86\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)GL\x86\include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ExecutablePath>$(SolutionDir)GL\x86\bin;$(ExecutablePath)</ExecutablePath>
+    <LibraryPath>$(SolutionDir)GL\x86\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)GL\x86\include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <PostBuildEvent>
+      <Command>xcopy "$(SolutionDir)GL\x86\bin" "$(SolutionDir)$(Configuration)" /y</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <PostBuildEvent>
+      <Command>xcopy "$(SolutionDir)GL\x86\bin" "$(SolutionDir)$(Configuration)" /y</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ExecutablePath>$(SolutionDir)GL\x86\bin;$(ExecutablePath)</ExecutablePath>
+    <LibraryPath>$(SolutionDir)GL\x86\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)GL\x86\include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ExecutablePath>$(SolutionDir)GL\x86\bin;$(ExecutablePath)</ExecutablePath>
+    <LibraryPath>$(SolutionDir)GL\x86\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)GL\x86\include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <PostBuildEvent>
+      <Command>xcopy "$(SolutionDir)GL\x86\bin" "$(SolutionDir)$(Configuration)" /y</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <PostBuildEvent>
+      <Command>xcopy "$(SolutionDir)GL\x86\bin" "$(SolutionDir)$(Configuration)" /y</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+</Project>
